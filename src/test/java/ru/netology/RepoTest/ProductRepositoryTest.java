@@ -20,6 +20,7 @@ public class ProductRepositoryTest {
     Product smartphone2 = new Smartphones(4, "Honor 50", "Huawei", 3000);
 
     @Test
+
     public void emptyRepo() {
         Product[] expected = {};
         Product[] actual = repo.findAll();
@@ -28,6 +29,7 @@ public class ProductRepositoryTest {
     }
 
     @Test
+
     public void shouldSaveOneProduct() {
         repo.save(book1);
 
@@ -38,6 +40,7 @@ public class ProductRepositoryTest {
     }
 
     @Test
+
     public void shouldSaveSeveralProducts() {
         repo.save(book1);
         repo.save(book2);
@@ -50,6 +53,7 @@ public class ProductRepositoryTest {
     }
 
     @Test
+
     public void shouldRemoveById() {
         repo.save(book1);
         repo.save(book2);
@@ -63,8 +67,8 @@ public class ProductRepositoryTest {
     }
 
 
-
     @Test
+
     public void shouldRemoveByNoId() {
         repo.save(book1);
         repo.save(book2);
@@ -74,7 +78,9 @@ public class ProductRepositoryTest {
         assertThrows(NotFoundException.class, () -> repo.removeById(5));
     }
 
+
     @Test
+
     public void shouldRemoveByNoId1() {
         repo.save(book1);
         repo.save(book2);

@@ -15,13 +15,14 @@ public class ProductManagerTest {
     ProductRepo repo = new ProductRepo();
     ProductManager manager = new ProductManager(repo);
 
-    Product book1 = new Book(1, "Мастер и Маргарита", "М. Булгаков", 500 );
-    Product book2 = new Book(2, "Остров окровищ", "Р. Стивенсон", 400 );
-    Product smartphone1 = new Smartphones(3, "Xperia 5", "Sony",5000 );
-    Product smartphone2 = new Smartphones(4, "Honor 50", "Huawei", 3000 );
+    Product book1 = new Book(1, "Мастер и Маргарита", "М. Булгаков", 500);
+    Product book2 = new Book(2, "Остров окровищ", "Р. Стивенсон", 400);
+    Product smartphone1 = new Smartphones(3, "Xperia 5", "Sony", 5000);
+    Product smartphone2 = new Smartphones(4, "Honor 50", "Huawei", 3000);
 
     @BeforeEach
     public void setUp() {
+
         manager.add(book1);
         manager.add(book2);
         manager.add(smartphone1);
